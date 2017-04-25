@@ -15,6 +15,10 @@
 
   <!-- Developer JS -->
   <script>
+
+      var config3d = {
+          extensions: ['Autodesk.Viewing.WebVR']
+      };
       var myViewerDiv = document.getElementById('MyViewerDiv');
       var viewer = new Autodesk.Viewing.Private.GuiViewer3D(myViewerDiv);
       var options = {
@@ -24,6 +28,7 @@
       Autodesk.Viewing.Initializer(options, function() {
         viewer.initialize();
         viewer.loadModel(options.document, options);
+        viewer.loadExtension('Autodesk.Viewing.WebVR');
       });
   </script>
 </body>
