@@ -36,7 +36,7 @@ $(document).ready( function(){
     var viewerApp;
 
     var config3d = {
-        extensions: ['Autodesk.Viewing.webVR']
+        extensions: ['Autodesk.Viewing.WebVR']
     };
 
     var options = {
