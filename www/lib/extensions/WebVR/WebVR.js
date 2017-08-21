@@ -307,6 +307,7 @@ Autodesk.Viewing.Extensions.WebVR.VRExtension.prototype.load = function () {
   var self = this
   var _vrDisplay = null
 
+  alert("load WebVR extension.")
   avp.injectCSS('extensions/WebVR/WebVR.css')
 
   // check if browser supports webVR1.1 natively, if not, load polyfill
@@ -315,6 +316,7 @@ Autodesk.Viewing.Extensions.WebVR.VRExtension.prototype.load = function () {
       if (displays.length > 0) {
         _vrDisplay = displays[0]
         if (_vrDisplay.capabilities.canPresent) {
+          alert("get one display"+ _vrDisplay);
 
           // VR detected, add the 'VR button'
           var viewer = self.viewer
