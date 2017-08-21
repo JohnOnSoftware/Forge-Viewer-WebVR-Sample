@@ -77358,6 +77358,7 @@ var av = Autodesk.Viewing,
      */
     avp.loadDependency = function(libNamespace, libName, callback, onError, amdName) {
         if (typeof window[libNamespace] === "undefined") {
+            alert( libNamespace + " is not defined")
             var s = document.createElement("SCRIPT");
             s.src = libName.indexOf('://') > 0 ? libName : avp.getResourceUrl(libName);
             var clearCallbacks = function() {
@@ -77384,8 +77385,10 @@ var av = Autodesk.Viewing,
             s.onerror = errCallback;
             document.head.appendChild(s);
         }
-        else if (callback)
+        else if (callback){
+            alert( libNamespace + " is already defined")
             callback();
+        }
     };
 
     /**

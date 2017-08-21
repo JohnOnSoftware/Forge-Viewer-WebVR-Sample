@@ -308,8 +308,8 @@ Autodesk.Viewing.Extensions.WebVR.VRExtension.prototype.load = function () {
   var _vrDisplay = null
 
   alert("load WebVR extension.")
-  avp.injectCSS('WebVR.css')
-  // avp.injectCSS('extensions/WebVR/WebVR.css')
+  // avp.injectCSS('WebVR.css')
+  avp.injectCSS('extensions/WebVR/WebVR.css')
   
 
   // check if browser supports webVR1.1 natively, if not, load polyfill
