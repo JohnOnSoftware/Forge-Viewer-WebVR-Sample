@@ -285,6 +285,7 @@ AutodeskNamespace('Autodesk.Viewing.Extensions.WebVR')
 
 Autodesk.Viewing.Extensions.WebVR.VRExtension = function (viewer, options) {
   Autodesk.Viewing.Extension.call(this, viewer, options)
+  
 }
 
 /**
@@ -320,6 +321,7 @@ Autodesk.Viewing.Extensions.WebVR.VRExtension.prototype.load = function () {
           var toolbar = viewer.getToolbar(true)
           var avu = Autodesk.Viewing.UI
 
+          Autodesk.Viewing.Extensions.WebVR.VRExtension.populateDefaultOptions(self.options)
           // Register tool
           self.tool = new Autodesk.Viewing.Extensions.WebVR.VRTool(viewer, self, _vrDisplay)
           viewer.toolController.registerTool(self.tool)

@@ -34,7 +34,8 @@
       Autodesk.Viewing.Initializer(options, function() {
         viewer.initialize();
         viewer.loadModel(options.document, options);
-        viewer.loadExtension('Autodesk.Viewing.WebVR');
+
+        viewer.loadExtension('Autodesk.Viewing.WebVR', Autodesk.Viewing.createViewerConfig());
       });
   </script>
 </body>
