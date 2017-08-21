@@ -77358,6 +77358,8 @@ var av = Autodesk.Viewing,
      */
     avp.loadDependency = function(libNamespace, libName, callback, onError, amdName) {
         if (typeof window[libNamespace] === "undefined") {
+            if(libNamespace === "VRFrameData")
+                alert("Your browser does not support WebVR natively, try to load" + libName)
             var s = document.createElement("SCRIPT");
             s.src = libName.indexOf('://') > 0 ? libName : avp.getResourceUrl(libName);
             var clearCallbacks = function() {
