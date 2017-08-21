@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Very Basic 3D Viewer</title>
-  <!-- <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.min.css?v=2.16" type="text/css"> -->
-  <link rel="stylesheet" href="lib/style.min.css" type="text/css">
+  <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.css?v=2.16" type="text/css">
+  <!-- <link rel="stylesheet" href="./lib/style.min.css" type="text/css"> -->
 </head>
 
 <body>
   <div id="MyViewerDiv"></div>
 
   <!-- The Viewer JS -->
-  <!-- <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/three.js?v=2.16"></script>
-  <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.js?v=2.16"></script> -->
+  <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/three.js?v=2.16"></script>
+  <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.js?v=2.16"></script>
 
     <!-- The Viewer JS -->
-  <script src="lib/three.js"></script>
-  <script src="lib/viewer3D.js"></script>
+  <!-- <script src="./lib/three.js"></script>
+  <script src="./lib/viewer3D.js"></script> -->
 
   <!-- Developer JS -->
   <script>
@@ -29,7 +29,7 @@
       var options = {
           'env' : 'Local',
           // 'document' : './house/a1af576d-c210-6497-3611-e358e01f8255_f2d/primaryGraphics.f2d'
-          'document' : './shaver/0.svf'
+          'document' : './copter/0.svf'
       };
       Autodesk.Viewing.Initializer(options, function() {
         viewer.initialize();
