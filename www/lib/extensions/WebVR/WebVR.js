@@ -313,7 +313,7 @@ Autodesk.Viewing.Extensions.WebVR.VRExtension.prototype.load = function () {
   
 
   // check if browser supports webVR1.1 natively, if not, load polyfill
-  avp.loadDependency('VRFrameData', 'webvr-polyfill.min.js', function () {
+  avp.loadDependency('VRFrameData', 'webvr-polyfill.js', function () {
     navigator.getVRDisplays().then(function (displays) {
       if (displays.length > 0) {
         _vrDisplay = displays[0]
