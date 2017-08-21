@@ -77358,21 +77358,17 @@ var av = Autodesk.Viewing,
      */
     avp.loadDependency = function(libNamespace, libName, callback, onError, amdName) {
         if (typeof window[libNamespace] === "undefined") {
-            alert( libNamespace + " is not defined")
             var s = document.createElement("SCRIPT");
             s.src = libName.indexOf('://') > 0 ? libName : avp.getResourceUrl(libName);
-            alert(s.src)
             var clearCallbacks = function() {
                 s.onerror = null;
                 s.onload = null;
             };
             var errCallback = function() {
-                alert("failed to load script" + libName)                
                 clearCallbacks();
                 onError && onError();
             };
             var successCallback = function() {
-                alert("successfully loaded script" + libName)
                 clearCallbacks();
                 //if there is a dependency which use amd and we are running on amd environment we load it through require
                 if(typeof define === 'function' && define.amd && typeof require === 'function' && amdName) {
@@ -77389,7 +77385,6 @@ var av = Autodesk.Viewing,
             document.head.appendChild(s);
         }
         else if (callback){
-            alert( libNamespace + " is already defined")
             callback();
         }
     };

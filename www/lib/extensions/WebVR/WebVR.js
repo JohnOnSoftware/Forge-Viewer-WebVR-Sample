@@ -318,7 +318,6 @@ Autodesk.Viewing.Extensions.WebVR.VRExtension.prototype.load = function () {
       if (displays.length > 0) {
         _vrDisplay = displays[0]
         if (_vrDisplay.capabilities.canPresent) {
-          alert("get one display");
 
           // VR detected, add the 'VR button'
           var viewer = self.viewer
