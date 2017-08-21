@@ -307,7 +307,7 @@ Autodesk.Viewing.Extensions.WebVR.VRExtension.prototype.load = function () {
   var self = this
   var _vrDisplay = null
 
-  alert("load WebVR extension.")
+  // alert("load WebVR extension.")
   // avp.injectCSS('WebVR.css')
   avp.injectCSS('extensions/WebVR/WebVR.css')
   
