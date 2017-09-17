@@ -295,9 +295,9 @@ Autodesk.Viewing.Extensions.WebVR.VRExtension = function (viewer, options) {
  */
 Autodesk.Viewing.Extensions.WebVR.VRExtension.populateDefaultOptions = function (options) {
   // Use double-dashes to prevent flag from being active by default while still surfacing them out (cuz why not)
-  options.experimental.push('webVR_orbitModel')
+  options.experimental.push('__webVR_orbitModel')
   options.experimental.push('webVR_cursor')
-  options.experimental.push('webVR_menu')
+  // options.experimental.push('webVR_menu')
 }
 
 Autodesk.Viewing.Extensions.WebVR.VRExtension.prototype = Object.create(Autodesk.Viewing.Extension.prototype)
@@ -731,6 +731,7 @@ Autodesk.Viewing.Extensions.WebVR.Cursor = function (viewerImpl, autocam, _scale
     else
       hitpt.y += STANDING_HEIGHT
 
+    console.log("the hitpt is x: "+ hitpt.x + "y: " +hitpt.y + "z: " + hitpt.z )
     var view = autocam.getCurrentView()
     view.position.copy(hitpt)
 
