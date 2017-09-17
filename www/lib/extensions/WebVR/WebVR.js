@@ -295,7 +295,7 @@ Autodesk.Viewing.Extensions.WebVR.VRExtension = function (viewer, options) {
  */
 Autodesk.Viewing.Extensions.WebVR.VRExtension.populateDefaultOptions = function (options) {
   // Use double-dashes to prevent flag from being active by default while still surfacing them out (cuz why not)
-  options.experimental.push('__webVR_orbitModel')
+  options.experimental.push('webVR_orbitModel')
   options.experimental.push('webVR_cursor')
   // options.experimental.push('webVR_menu')
 }
@@ -722,6 +722,7 @@ Autodesk.Viewing.Extensions.WebVR.Cursor = function (viewerImpl, autocam, _scale
 
   }
 
+  // TBD: will display the propety for the current hit element
   this.onClick = function () {
     if (!hit) return
     var hitpt = hit.intersectPoint
